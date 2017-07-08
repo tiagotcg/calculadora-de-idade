@@ -6,14 +6,19 @@ dia_atual = int(data_atual.tm_mday)
 mes_atual = int(data_atual.tm_mon)
 ano_atual = int(data_atual.tm_year)
 
-print("Hoje é dia {} do mês {} do ano {} .".format(dia_atual, mes_atual, ano_atual))
-print("--------------------------------------------------------------------------------------------------------- \n \n ")
+
+print("Hoje é dia {} do mês {} do ano {} ".format(dia_atual, mes_atual, ano_atual))
+print("(Today is {} / {} / {} )".format(ano_atual, mes_atual, dia_atual))
+
+print("------------------------------------------------------------------------------------------------------------------------------------------------------------ \n \n ")
 
 ############################################################################### SOLICITANDO OS DADOS DA DATA DE NASCIMENTO:
-print("Digite a data no formato dd / mm / aaaa \n")
-ano_nascimento = int(input("Qual o ano de nascimento? "))
-mes_nascimento = int(input("Qual o mês de nascimento? "))
-dia_nascimento = int(input("Qual o dia de nascimento? "))
+print("Digite a data no formato dd / mm / aaaa")
+print("(Put the date like this: yyyy / mm / dd ) \n")
+
+ano_nascimento = int(input("Qual o ano de nascimento? (What's the year of birth?) "))
+mes_nascimento = int(input("Qual o mês de nascimento? (and the month of birth?) "))
+dia_nascimento = int(input("Qual o dia de nascimento? (and the day of birth?) "))
 
 
 ############################################################################### FAZENDO A LISTA DOS ANOS BISSEXTOS (0 A 2100):
@@ -61,7 +66,7 @@ elif mes_nascimento == 11:
 elif mes_nascimento == 12:
 	quantidade_dias_mes_referido = 31
 else:
-	print("DATA INVÁLIDA!")
+	print("DATA INVÁLIDA! (invalid date!) ")
 	exit()
 
 ############################################################################### CALCULANDO A IDADE:
@@ -112,7 +117,9 @@ else:
 		dias_total = dia_atual - dia_nascimento
 
 # 3) Definindo a idade:
-print("Sua idade é: {} anos {} meses {} dias. \n".format(anos_total, meses_total, dias_total))
+print("\nSua idade é: {} anos {} meses e {} dias. ".format(anos_total, meses_total, dias_total))
+print("Your age is: {} year(s) {} month(s) and {} day(s). \n".format(anos_total, meses_total, dias_total))
+
 
 while True:
         continue
